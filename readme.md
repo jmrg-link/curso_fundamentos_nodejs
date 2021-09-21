@@ -173,4 +173,16 @@ $ pm2 install pm2-logrotate     # Install module (here a log rotation system)
 $ pm2 uninstall pm2-logrotate   # Uninstall module
 $ pm2 publish                   # Increment version, git push and npm publish
 ```
+---
+
+#### Callbacks
+* Una funcion **callback** es una funcion que es pasada como argumento a otra funcion, para ser llamada(called back) en otro momento.
+* La funcion que recibe como argumento otras funciones es denominada funcion de orden superior (higher-order function), esta contiene la logica correspondiente para ejecutar adecuadamente la funcion callback.
+
+En el siguiente codigo:
+```javascript
+setTimeout(console.log('Hello'), 1000) // cada segundo hay una funcion de log que dice hello
+
+// setTimeout es una higher-order function y console.log es una callback function
+```
 
