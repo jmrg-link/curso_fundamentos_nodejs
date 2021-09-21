@@ -86,8 +86,8 @@ La propiedad env es la que nos da acceso a las variables de entorno de manera se
 ---
 
 #### Desarrollo:
-#####Desarrollo
-* **[Nodemon]("https://nodemon.io/"):** Demons en linux, puedes tener procesos que ves ejecutandose.
+
+* [Nodemon]("https://nodemon.io/") Demons en linux, puedes tener procesos que ves ejecutandose.
 
 ```bash
 //instalar nodemon como global 
@@ -102,7 +102,7 @@ npm run dev
   * Ejecutar: **nodemon + file** al que quiero acceder detecta cambios, y ejecuta automaticamente el código.
 
 
-#####Producción
+##### Producción
 
 * **sudo npm install -g pm2**
 
