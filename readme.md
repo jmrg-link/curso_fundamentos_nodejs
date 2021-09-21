@@ -44,3 +44,20 @@
 -   **Event Loop:** Se encarga de resolver los eventos ultra rápidos que llegan desde el Event Queue. En caso de no poder resolverse rápido, enviá el evento al Thread Pool.
 
 -   **Thread Pool:** Se encarga de gestionar los eventos de forma asíncrona. Una vez terminado lo devuelve al Event Loop. El Event Loop vera si lo pasa a Event Queue o no.
+
+<img src="https://static.platzi.com/media/user_upload/nodejs-arquitecture-3ddf57a4-0cc2-4606-8eae-5f978c217ecb.jpg" alt="platzi logo" height="300px">
+
+-   **Explicacion:**
+    -   Dentro de node, una de las dependencias más importantes es libuv ya que es la que se encarga de gestionar los eventos en node.js.
+    - Algunas de las funcionalidades de **libuv** son:
+        -   Bucle de eventos con todas las funciones necesarias.
+        -   Operaciones asincronas sobre archivos.
+        -   Eventos del sistema de archivos.
+        -   Grupo de hilos/procesos (Thread pool).
+
+```link
+http://docs.libuv.org/en/v1.x/
+```
+
+---
+
