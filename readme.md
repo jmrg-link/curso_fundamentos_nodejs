@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Curso de Fundamentos de Node.js</h1>
   <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Platzi.jpg" alt="platzi logo" height="300px">
-  <h3 style="font-weight:bold;" >Curso Node y Npm (4H)</h3>
+  <h3 style="font-weight:bold;" >Curso Fundamentos de Nodejs (4H)</h3>
   <h5></h5>
 </div>
 
