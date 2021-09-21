@@ -58,6 +58,27 @@
 ```link
 http://docs.libuv.org/en/v1.x/
 ```
-
 ---
 
+#### Monohilo
+* Proceso de node
+
+  - 1.- Va a abrirse un proceso, ese proceso es un proceso de node
+  - 2.- Interpreta todo el archivo
+  - 3.- Convertirlo a código maquina
+  - 4.- Prepara todo lo que necesita para ejecutarse
+  - 5.- Se ejecuta
+  - 6.- Se cierra el proceso, y termina
+
+* Desventaja del Monohilo
+
+    - Si no se manejan bien los errores y uno falla, ya no continua con los procesos posteriores
+    - Debes estar pendiente de todo el código y depurar de mejor manera para evitar el fallo de la apliaciion.
+---
+#### Variables de Entorno
+- Las **variables de entorno** son una forma de llamar información de afuera a nuestro software, sirve para definir parámetros sencillos de configuración de los programas de modo que puedan ejecutarse en diferentes ambiente sin necesidad de modificar el código fuente de un script.
+
+- El objeto process_env nos da información sobre el procesos que está ejecutando este script.
+La propiedad env es la que nos da acceso a las variables de entorno de manera sencilla.
+
+* **example:** varEntorno.js
