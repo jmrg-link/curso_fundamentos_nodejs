@@ -82,3 +82,35 @@ http://docs.libuv.org/en/v1.x/
 La propiedad env es la que nos da acceso a las variables de entorno de manera sencilla.
 
 * **example:** varEntorno.js
+
+---
+
+#### Desarrollo:
+#####Desarrollo
+* **[Nodemon]("https://nodemon.io/"):** Demons en linux, puedes tener procesos que ves ejecutandose.
+
+```bash
+//instalar nodemon como global 
+  sudo npm install nodemon -g
+//En package.json podemos escribir un script con cierto comando.
+  script: {
+  "dev": "nodemon src/app.js "
+}
+// Ejecutar comando para correr nodemon con demons 
+npm run dev 
+```
+  * Ejecutar: **nodemon + file** al que quiero acceder detecta cambios, y ejecuta automaticamente el código.
+
+
+#####Producción
+
+* **sudo npm install -g pm2**
+
+* **PM2:** Es un demonio administrador de procesos que me puede ayudar a administrar y mantener mi aplicación 24/7.
+
+* Voy a poner monitorizar el código para saber si algo se rompe.
+* Me permite ver dashboards de mi código, puedo ver que está corriendo.
+* Puedo ver el rendimiento de mi cpu
+* Con: pm2 stop + id —> me detiene el proceso que está en ejecución con ese ID.
+* url de [PM2]("https://platzi.com/clases/1759-fundamentos-node/25188-herramientas-para-ser-mas-felices-nodemon-y-pm2/#:~:text=con%20ese%20ID.-,PM2,-Responder")
+
