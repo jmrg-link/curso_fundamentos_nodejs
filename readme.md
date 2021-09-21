@@ -185,10 +185,20 @@ setTimeout(console.log('Hello'), 1000) // cada segundo hay una funcion de log qu
 
 // setTimeout es una higher-order function y console.log es una callback function
 ```
-
+#### Metodos Asincronos.
+---
+##### Callbacks
 * Los **callback Hell** se dan cuando empiezo a pasar una función como parámetro que a su vez llama a otra función como parámetro, y así hasta n.
 Una estrategia para trabajar con estas estructuras lógicas tan monolíticas es usar estructuras de control y funciones recursivas.
 
 * Las funciones recursivas se llaman así mismas y mediante la estructura de control le digo cuantas veces voy a necesitar llamar la función así misma.
 
 * **Ejemplo:** async/cbHell.js
+
+---
+
+##### Promesas
+  * Las promesas vienen de los callbacks, pero las promesas lo que hacen es dar un estado.
+* Las promesas son una “clase” global que podemos llamar de donde sea, nuestras funciones devuelvan promesas Promise(), la diferenia entre promises y callbacks es la capacidad de anidar promesas. Formando una cadena de promesas.
+* Es muy útil para visualizar código asíncrono de manera síncrona.
+* **Ejemplo:** async/promises.js
