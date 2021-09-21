@@ -186,3 +186,9 @@ setTimeout(console.log('Hello'), 1000) // cada segundo hay una funcion de log qu
 // setTimeout es una higher-order function y console.log es una callback function
 ```
 
+* Los **callback Hell** se dan cuando empiezo a pasar una función como parámetro que a su vez llama a otra función como parámetro, y así hasta n.
+Una estrategia para trabajar con estas estructuras lógicas tan monolíticas es usar estructuras de control y funciones recursivas.
+
+* Las funciones recursivas se llaman así mismas y mediante la estructura de control le digo cuantas veces voy a necesitar llamar la función así misma.
+
+* **Ejemplo:** async/cbHell.js
