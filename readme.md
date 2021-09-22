@@ -202,3 +202,11 @@ Una estrategia para trabajar con estas estructuras lógicas tan monolíticas es 
 * Las promesas son una “clase” global que podemos llamar de donde sea, nuestras funciones devuelvan promesas Promise(), la diferenia entre promises y callbacks es la capacidad de anidar promesas. Formando una cadena de promesas.
 * Es muy útil para visualizar código asíncrono de manera síncrona.
 * **Ejemplo:** async/promises.js
+
+---
+
+##### Async - Await
+* Con **Async / Await** podemos tratar funciones asíncronas como si fuesen síncronas y que la sintáxis sea más legible.
+
+* Las funciones con **Async / Await** no estarán bloqueando el hilo principal, pues estarán esperando a que se resuelva con el event loop.
+* **Ejemplo:** async/async-await.js
