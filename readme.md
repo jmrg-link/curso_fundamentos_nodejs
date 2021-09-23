@@ -211,3 +211,28 @@ Una estrategia para trabajar con estas estructuras lógicas tan monolíticas es 
 * Las funciones con **Async / Await** no estarán bloqueando el hilo principal, pues estarán esperando a que se resuelva con el event loop.
 
 * **Ejemplo:** async/async-await.js
+
+---
+
+##### Modulos en Nodejs
+* Los módulos en nodejs son muchos módulos que vienen incluidos en módulos globales. En Node.js tenemos el objeto global que tiene métodos y propiedades, a esto es lo que se le llama módulos globales.
+  * prototype.global
+
+* Algunos módulos globales:
+  * setInterval
+  * setImmediate
+  * require
+  * __dirname
+  * __filename
+
+* sí declaras un variable global:
+```javascript
+  // example
+  global.variableGlobal = 'valor'
+  console.log(variableGlobal)
+
+  👀 En node this es un alias de global
+  // === verificacion estricta (true)
+  this === global
+
+```
