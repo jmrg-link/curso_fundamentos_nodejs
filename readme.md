@@ -394,8 +394,31 @@ openssl rsa -in server.key -text > private.pem # generate .key to .pem
 ---
 
 #### Module Os - Operative System.
-* El modulo de OS, Operative System, nos permite ejecutar acciones de más bajo nivel en nuestro sistema, permitiéndonos conocer una gran variedad de detalles del mismo.
+* El modulo de OS, **Operative System**, nos permite ejecutar acciones de más bajo nivel en nuestro sistema, permitiéndonos conocer una gran variedad de detalles del mismo.
 Como la memoria disponible que tiene, el total de la memoria, la interfaz de red, etc.
 Esto nos será de gran ayuda a la hora de ejecutar o crear proyectos que necesiten información de una maquina para ejecutar una operación.
 
 * **Ejemplo:** modulos/os.js
+
+---
+
+#### Modulo Process
+* Podremos entender y ver qué pasa con el Process, podremos escuchar señales, escuchar lo que necesitemos y después hacer cosas con ellos.
+
+* Podemos hacer require para obtener process:
+```javascript
+//No es necesario requerirlo
+const process = require('process')
+```
+* Pero lo anterior no es necesario, ya que process es una variable global.
+  * beforeExit → Es para enviar algo antes que pare un proceso.
+  * exit → Es para matar un proceso.
+  * uncaughtException → Permite capturar cualquier error que no fue caputurado previamente.
+  * uncaughtRejection → Permite capturar cualquier error de promesas que se han rechazado.
+
+```javascript
+process.on('uncaughtException', (err, origen) => {
+    console.error('Se nos ha olvidado capturar un error')
+    console.error(err)
+})
+```
