@@ -209,4 +209,5 @@ Una estrategia para trabajar con estas estructuras lógicas tan monolíticas es 
 * Con **Async / Await** podemos tratar funciones asíncronas como si fuesen síncronas y que la sintáxis sea más legible.
 
 * Las funciones con **Async / Await** no estarán bloqueando el hilo principal, pues estarán esperando a que se resuelva con el event loop.
+
 * **Ejemplo:** async/async-await.js
