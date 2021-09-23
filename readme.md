@@ -286,3 +286,77 @@ nuestra terminal.
   * console.group: permite agrupar errores mediante identación.
   * console.groupEnd: finaliza la agrupación.
   * console.clear: Limpia la consola.
+
+---
+#### Errores Try - Catch
+* Cuando se genera un error, node propaga el error hacia arriba, hasta que esta es caputado. si el error no se captura node se detiene.
+
+  * Siempre que sea posible debemos capturar todos los errores que se puedan generar en nuestros hilos.
+  * **Ejemplo:** modulos/try-catch.js
+
+* Nos permite caputar los errores:
+```javascript
+const badfunction = () => 5 + z;
+try {
+    badfunction()
+} catch (error) {
+    console.log('bad function ha fallado')
+    console.error(error.message)
+}
+console.log('continuamos...')
+```
+* Si deseamos manejar errores asincronos:
+```javascript
+function badfunction() {
+    setImmediate(() => {
+        try {
+            return 5 + z
+        } catch (error) {
+            console.log('bad function ha fallado')
+            console.error(error.message)
+            console.log('continuamos...')
+        }
+    });
+}
+badfunction()
+```
+
+---
+#### Child Process
+* El módulo de procesos secundarios de Node.js (child_process) tiene dos funciones spawn y exec, mediante las cuales podemos iniciar un proceso secundario para ejecutar otros programas en el sistema.
+
+* La diferencia más significativa entre child_process.spawn y child_process.exec está en lo que spawn devuelve un stream y exec devuelve un buffer.
+
+* Usa spawn cuando quieras que el proceso hijo devuelva datos binarios enormes a Node.
+* Usa exec cuando quieras que el proceso hijo devuelva mensajes de estado simples.
+* Usa spawn cuando quieras recibir datos desde que el proceso arranca.
+* Usa exec cuando solo quieras recibir datos al final de la ejecución.
+* Un buen blog para revisar mas del tema:
+* **Ejemplo:** modulos/Child_Process.js
+
+```javascript
+const {exec , spawm } = require('child-process)
+console.clear()
+let proceso = spawm('cmd.exe',['/c','dir'])
+console.log(proceso.pid)
+console.log(proceso.connected)
+
+proceso.stdout.on('data') =>{
+  console.log('¿Its death?')
+  console.log(process.killed)
+  console.log(data.toString())
+}
+
+process.on('exit', ()=> {
+  console.log('' El proceso ha finalizado)
+  console.log(proceso.killed)
+})
+```
+
+---
+#### Modulos Nativos de C++
+* Node.js permite hacer uso de módulos nativos de c++. Para lograr esto debemos instalar **sudo npm i -g node-gyp**, este modulo de npm nos permite compilar módulos nativos de c++ en node.
+
+* Luego debemos tener listo nuestro archivo de código fuente en c++ junto a otro archivo .gyp, que nos ayudara hacer la compilación a JavaScript.
+
+* En este archivo .gyp le indicamos que va compilar, como se va llamar el archivo resultante y de donde va a tomar la info a convertir, todo esto lo dejamos como un json luego le decimos a node que configure este modulo, con le comando node-gyp configure, como resultado tendremos en un directorio nuevo donde se encontraran diferentes archivos de código nativo, para finalizar con node-gyp build creamos nuestro modulo y estará listo para ser usado.
