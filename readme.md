@@ -375,9 +375,27 @@ process.on('exit', ()=> {
 
 * Uno de los métodos principales de este modulo es createServer, el cual nos permitirá abrir un puerto para crear el servidor.
 
+* **Generar certifidos SSL:**
+
+```bash
+# Generar certificados con openssl
+openssl genrsa -des3 -out server.key 1024 # generate .key
+openssl req -new -key server.key -out server.csr # generate .csr
+openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt # generate .crt
+
+openssl x509 -inform DER -outform PEM -in server.crt -out server.crt.pem # generate .crt to .pem
+openssl rsa -in server.key -text > private.pem # generate .key to .pem
+
+```
+
 * **Ejemplo:** modulos/http.js
+* **Ejemplo:** modulos/http2.js
 
 ---
 
 #### Module Os - Operative System.
-* 
+* El modulo de OS, Operative System, nos permite ejecutar acciones de más bajo nivel en nuestro sistema, permitiéndonos conocer una gran variedad de detalles del mismo.
+Como la memoria disponible que tiene, el total de la memoria, la interfaz de red, etc.
+Esto nos será de gran ayuda a la hora de ejecutar o crear proyectos que necesiten información de una maquina para ejecutar una operación.
+
+* **Ejemplo:** modulos/os.js
