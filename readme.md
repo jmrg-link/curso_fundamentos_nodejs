@@ -331,7 +331,7 @@ badfunction()
 * Usa exec cuando quieras que el proceso hijo devuelva mensajes de estado simples.
 * Usa spawn cuando quieras recibir datos desde que el proceso arranca.
 * Usa exec cuando solo quieras recibir datos al final de la ejecución.
-* Un buen blog para revisar mas del tema:
+
 * **Ejemplo:** modulos/Child_Process.js
 
 ```javascript
