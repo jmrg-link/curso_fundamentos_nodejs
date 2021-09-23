@@ -360,3 +360,24 @@ process.on('exit', ()=> {
 * Luego debemos tener listo nuestro archivo de código fuente en c++ junto a otro archivo .gyp, que nos ayudara hacer la compilación a JavaScript.
 
 * En este archivo .gyp le indicamos que va compilar, como se va llamar el archivo resultante y de donde va a tomar la info a convertir, todo esto lo dejamos como un json luego le decimos a node que configure este modulo, con le comando node-gyp configure, como resultado tendremos en un directorio nuevo donde se encontraran diferentes archivos de código nativo, para finalizar con node-gyp build creamos nuestro modulo y estará listo para ser usado.
+* **Ejemplo:** modulos/nativos/index.js
+
+---
+#### Http
+* Node.js ofrece el modulo HTTP el cual nos permite principalmente crear un servidor en nuestro computador.
+
+* Existe varias versiones del modulo **HTTP** nativos de nodejs:
+  * HTTP
+  * HTTPS
+  * HTTP/2
+
+* En este modulo encontraremos todo lo necesario que necesitamos para crear un sistema de rutas, que responderá cada ruta, los header que podrá mandar, etc.
+
+* Uno de los métodos principales de este modulo es createServer, el cual nos permitirá abrir un puerto para crear el servidor.
+
+* **Ejemplo:** modulos/http.js
+
+---
+
+#### Module Os - Operative System.
+* 
