@@ -11,7 +11,7 @@ count = 0
 //    console.log('hi');
 //})
 
-//process.env , process.config Macosx o Linux
+//process.env , process.config , process
 console.log('Version Nodejs : ' + process.versions.node);
 console.log('Ruta del archivo con fichero : ' + __filename);
 console.log('Ruta del archivo : ' + __dirname);
