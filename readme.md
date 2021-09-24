@@ -434,3 +434,19 @@ process.on('uncaughtException', (err, origen) => {
 ---
 
 #### Contruyendo Modulos : require e Import
+* Para importar modulos propios o de terceros, debemos utilizar el **require** o **import** (import se considera experimental en versiones antiguas de node)
+```javascript
+//Module
+function suma(a, b) { return a + b};
+function saludar(nombre) { return `Hola ${nombre}`}
+const PI = 3.14159264
+
+module.exports = { suma, saludar, PI }
+```
+```javascript
+// import
+const { suma, saludar, PI } = require(...path_module)
+suma(3,2)
+saludar('Jesuskinto')
+console.log(`Pi es un constante y su valor es: ${PI}`)
+```
