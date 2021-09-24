@@ -510,3 +510,14 @@ sharp('fondo-carro.jpg')
 * La información en memoria esta pensada para ser escrita rapida pero borrada tambien rapida.
 * La información almacenada en disco puede ser almacenada durante mucho mas tiempo pero es mucho mas lento escribir y leer en ellos.
 <img src="https://www.enterprisestorageforum.com/wp-content/uploads/2021/02/memory-vs-storage_6019c498d2ad7.png" alt="platzi mem" height="300px">
+
+---
+
+#### Buffers
+* ¿Qué es un Buffer?
+  * Buffers son objetos usados para represnetar un secuencia de bytes con una longitud fija. Es una subclase de Uint8Arrays y esta en el scope global. Estan diseñadas para trabajar con datos binarios.
+
+* ¿Por qué usar Buffers?
+  * JavaScript puro aunque bueno con cadenas de texto unicode no maneja muy bien datos binarios. Esto esta bien el el navegador donde casi toda la data proviene de strings. Sin embargo los servidores con Node también tienen que lidiar con TCP strams o con leet y escribir en el sistema de archivos. Ambos necesitan usar streams de datos binarios.
+
+* Una maneja de manjear esto es usar strings que es lo que Node intento hacer primero. Este approach resulto bastante problematico porque tiene una tendencia a romperse de maneas extrañas y misteriosas.
