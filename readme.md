@@ -521,3 +521,4 @@ sharp('fondo-carro.jpg')
   * JavaScript puro aunque bueno con cadenas de texto unicode no maneja muy bien datos binarios. Esto esta bien el el navegador donde casi toda la data proviene de strings. Sin embargo los servidores con Node también tienen que lidiar con TCP strams o con leet y escribir en el sistema de archivos. Ambos necesitan usar streams de datos binarios.
 
 * Una maneja de manjear esto es usar strings que es lo que Node intento hacer primero. Este approach resulto bastante problematico porque tiene una tendencia a romperse de maneas extrañas y misteriosas.
+*  **Ejemplo:** modulos/buffer.js
