@@ -509,4 +509,4 @@ sharp('fondo-carro.jpg')
 #### Datos en Memoria Vs Datos Almacenados
 * La información en memoria esta pensada para ser escrita rapida pero borrada tambien rapida.
 * La información almacenada en disco puede ser almacenada durante mucho mas tiempo pero es mucho mas lento escribir y leer en ellos.
-* <img src="https://www.enterprisestorageforum.com/wp-content/uploads/2021/02/memory-vs-storage_6019c498d2ad7.png" alt="platzi mem" height="300px">
+<img src="https://www.enterprisestorageforum.com/wp-content/uploads/2021/02/memory-vs-storage_6019c498d2ad7.png" alt="platzi mem" height="300px">
