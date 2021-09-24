@@ -450,3 +450,63 @@ suma(3,2)
 saludar('Jesuskinto')
 console.log(`Pi es un constante y su valor es: ${PI}`)
 ```
+
+---
+
+#### Modulos Recomendados:
+* Módulos que utilizaremos frecuentemente en nuestras aplicaciones como:
+
+* **bycript :** Permite encriptar un string generando un hash.
+
+* **bycript.hash :** Genera el hash del string, este método recibe por parámetros el string a encriptar, las veces que debe ejecutarse el script para generar un hash aleatorio y por ultimo una función que se encarga de capturar hash o el error que se presente.
+
+* **bycript.compare :** Permite comprar el hash con el string a encriptado y nos devuelve un true o false. bycript.compare recibe por parámetros el string a encriptado, luego el hash y por ultimo una función que captura la información o el error que se presente.
+
+* Como se usa:
+```js
+//importamos el modulo
+const bcrypt = require('bcrypt');
+//declaramos el pass o palabra a encriptar
+const passworld = '1234Segura';
+//bcrypt.hash no permite generar un hash
+bcrypt.hash(passworld, 10, function(error, hash) {
+  console.log(hash);
+//bcrypt.compare nos devuelve un boleano si hash y contraseña son iguales
+  bcrypt.compare(passworld, hash, function(err, res) {
+    console.log(res)
+  });
+});
+```
+
+* Momentjs : Logramos manipular fechas de manera eficiente.
+moment.format : Podemos darle un formato adecuado a nuestra fecha.
+
+```js
+//importamos el modulo
+const moment = require('moment');
+let ahora = moment();
+//establecemos el formato a usar
+let ahoraFormat = ahora.format('HH:mm:ss');
+console.log(ahoraFormat);
+```
+
+* sharp : Permite trabajar con imágenes
+
+```js
+//importamos el modulo
+const sharp = require('sharp');
+//ruta de la imagen a modificar
+sharp('fondo-carro.jpg')
+//scalamos la imagen a 500 de alto
+  .resize(500)
+//otorgamos una escala de grises
+  .grayscale()
+//generamos el archivo modificado
+  .toFile('fondo-carro-small.jpg');
+```
+---
+
+#### Datos en Memoria Vs Datos Almacenados
+* La información en memoria esta pensada para ser escrita rapida pero borrada tambien rapida.
+* La información almacenada en disco puede ser almacenada durante mucho mas tiempo pero es mucho mas lento escribir y leer en ellos.
+* <img src="https://www.enterprisestorageforum.com/wp-content/uploads/2021/02/memory-vs-storage_6019c498d2ad7.png" alt="platzi mem" height="300px">
