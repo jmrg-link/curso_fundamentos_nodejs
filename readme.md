@@ -422,3 +422,15 @@ process.on('uncaughtException', (err, origen) => {
     console.error(err)
 })
 ```
+* **Ejemplo:** modulos/process.js
+
+---
+
+#### Gestion de Paquete con Node.js y Npm
+* npm (Node Package Manager) es un administrador de paquetes que permiten ejecutar funciones ya realizadas y validadas y de esta manera acelerar y asegurar la calidad de neustro proceso de desarrollo.
+
+ * Podemos buscar modulos para casi todo en: https: https://www.npmjs.com/
+
+---
+
+#### Contruyendo Modulos : require e Import
