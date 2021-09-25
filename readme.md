@@ -522,3 +522,10 @@ sharp('fondo-carro.jpg')
 
 * Una maneja de manjear esto es usar strings que es lo que Node intento hacer primero. Este approach resulto bastante problematico porque tiene una tendencia a romperse de maneas extrañas y misteriosas.
 *  **Ejemplo:** modulos/buffer.js
+
+---
+
+#### Streams
+* Las **Streams** son colecciones de datos, como matrices o cadenas. La diferencia es que las transmisiones pueden no estar disponibles de una vez y no tienen que caber en la memoria. Esto hace que las transmisiones sean realmente poderosas cuando se trabaja con grandes cantidades de datos, o datos que provienen de una fuente externa o un fragmento a la vez.
+
+*  **Ejemplo:** modulos/streams.js
