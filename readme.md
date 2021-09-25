@@ -534,10 +534,11 @@ sharp('fondo-carro.jpg')
 #### Pruebas con Node.js (Benchmarking)
 * Realizar pruebas de velocidad y rendimiento en nuestro codigo es positivo y recomendable para tener un control de la aplicacion y su funcionalidad correcta.
 * La función **console.time(‘nombre’)** inicia un temporizador que se puede usar para rastrear cuánto tiempo dura una operación. El temporizador sera identificado por el nombre dado a la consola. Ese mismo nombre se utilizara cuando se llame a console.timeEnd(‘nombre’) para detener el temporizador y obtener el tiempo demorado durante el proceso.
-
+*  **Ejemplo:** cheats/benchmarking.js
 ---
 #### Error First Callback
 * Los Error First Callbacks se utilizan para pasar primero el error y los datos posteriormente. Entonces, puedes verificar el primer argumento, es decir, el objeto de error para ver si algo salió mal y puedes manejarlo. En caso de que no haya ningún error, puedes utilizar los argumentos posteriores y seguir adelante.
+*  **Ejemplo:** cheats/errorFisrt.js
 ```javascript
 fs.readFile('/text.txt', function(err, data) {
 	if (err) {
@@ -551,8 +552,10 @@ fs.readFile('/text.txt', function(err, data) {
 
 #### Webscrapping con puppeter
 * **Web scraping** es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación.
+*  **Ejemplo:** cheats/scrapping.js
 ---
 #### Automatizacion de Tareas con **GULP.JS**
 * Que es gulp.js? 📖🖥💥
-
-Es una herramienta de construcción en JavaScript construida sobre flujos de nodos . Estos flujos facilitan la conexión de operaciones de archivos a través de canalizaciones . Gulp lee el sistema de archivos y canaliza los datos disponibles de un complemento de un solo propósito a otro a través del .pipe()operador, haciendo una tarea a la vez. Los archivos originales no se ven afectados hasta que se procesan todos los complementos. Se puede configurar para modificar los archivos originales o para crear nuevos. Esto otorga la capacidad de realizar tareas complejas mediante la vinculación de sus numerosos complementos. Los usuarios también pueden escribir sus propios complementos para definir sus propias tareas. 
+* Es una herramienta de construcción en JavaScript construida sobre flujos de nodos . Estos flujos facilitan la conexión de operaciones de archivos a través de canalizaciones . Gulp lee el sistema de archivos y canaliza los datos disponibles de un complemento de un solo propósito a otro a través del .pipe()operador, haciendo una tarea a la vez. Los archivos originales no se ven afectados hasta que se procesan todos los complementos. Se puede configurar para modificar los archivos originales o para crear nuevos. Esto otorga la capacidad de realizar tareas complejas mediante la vinculación de sus numerosos complementos. Los usuarios también pueden escribir sus propios complementos para definir sus propias tareas. 
+*  **Ejemplo:** gulpfile.js
+----
