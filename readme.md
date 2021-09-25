@@ -529,3 +529,25 @@ sharp('fondo-carro.jpg')
 * Las **Streams** son colecciones de datos, como matrices o cadenas. La diferencia es que las transmisiones pueden no estar disponibles de una vez y no tienen que caber en la memoria. Esto hace que las transmisiones sean realmente poderosas cuando se trabaja con grandes cantidades de datos, o datos que provienen de una fuente externa o un fragmento a la vez.
 
 *  **Ejemplo:** modulos/streams.js
+
+---
+#### Pruebas con Node.js (Benchmarking)
+* Realizar pruebas de velocidad y rendimiento en nuestro codigo es positivo y recomendable para tener un control de la aplicacion y su funcionalidad correcta.
+* La función **console.time(‘nombre’)** inicia un temporizador que se puede usar para rastrear cuánto tiempo dura una operación. El temporizador sera identificado por el nombre dado a la consola. Ese mismo nombre se utilizara cuando se llame a console.timeEnd(‘nombre’) para detener el temporizador y obtener el tiempo demorado durante el proceso.
+
+---
+#### Error First Callback
+* Los Error First Callbacks se utilizan para pasar primero el error y los datos posteriormente. Entonces, puedes verificar el primer argumento, es decir, el objeto de error para ver si algo salió mal y puedes manejarlo. En caso de que no haya ningún error, puedes utilizar los argumentos posteriores y seguir adelante.
+```javascript
+fs.readFile('/text.txt', function(err, data) {
+	if (err) {
+		console.log(err);
+	} else {
+		console.log(data);
+	} 
+});
+```
+---
+
+#### Webscrapping con puppeter
+* **Web scraping** es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación.

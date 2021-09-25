@@ -2,7 +2,7 @@ const fs = require('fs')
 const stream = require('stream')
 const util = require('util')
 let readableStream = fs.createReadStream(__dirname + '/input.txt')
-readableStream.setEncoding('UTF8')
+readableStream.setEncoding('utf-8')
 
 //readableStream.on('data',(chunk)=>{
 //    //console.log(chunk);
